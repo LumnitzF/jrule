@@ -48,7 +48,7 @@ public class JRuleItemRegistry {
                 throw new RuntimeException(ex);
             }
         }
-        return (T) jruleItem;
+        return jRuleItemClass.cast(jruleItem);
     }
 
     private static void verifyThatItemExist(String itemName) throws JRuleItemNotFoundException {
