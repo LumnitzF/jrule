@@ -18,11 +18,11 @@ public class JRuleItems {
 
 
 <#list items as item>
- public static ${item.class} ${item.name};
+ public static final ${item.class} ${item.name};
 
 </#list>
 
- public JRuleItems() {
+ static {
 
    <#list items as item>
     ${item.name} = JRuleItemRegistry.get("${item.name}", ${item.class}.class);
